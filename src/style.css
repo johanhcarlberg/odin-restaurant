@@ -1,0 +1,173 @@
+* {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+
+
+body {
+    display: grid;
+    grid-template-rows: 6fr 10fr 1fr;
+}
+
+header {
+    grid-row: 1;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+}
+
+nav {
+    grid-row: 1;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #361500;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    font-size: 1.5rem;
+    padding: 15px 0;
+}
+
+nav ul li {
+    border-right: 1px solid #603601;
+    padding: 5px 25px;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #CC9544;
+}
+
+nav ul li:last-child {
+    border: none;
+}
+
+nav ul a:hover {
+    color: #e4bc80;
+}
+
+#header-image {
+    grid-row: 2;
+    background-color: #CC9544;
+    background: linear-gradient(
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0.4)
+    ),url('./header.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+#headline {
+    display: grid;
+    justify-items: center;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+#headline h2 {
+    font-size: 4rem;
+}
+
+main {
+    grid-row: 2;
+    background-color: #181106;
+    display: grid;
+    justify-items: center;
+}
+
+#content {
+    background-color: #181106;
+    color: #CC9544;
+    width: 40%;
+    margin: 40px 0 40px 0;
+    border-radius: 20px;
+}
+
+.home-content {
+    display: grid;
+    width: 100%;
+    gap: 40px;
+}
+
+.opening-hours {
+    justify-self: center;
+    padding: 10px 20px 20px 20px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 15px;
+    justify-items: center;
+    border: 1px solid #e4bc80;
+    border-radius: 15px;
+}
+
+.opening-hours h2 {
+    font-size: 2rem;
+    grid-column: 1 / span 3;
+    align-self: start;
+}
+
+.opening-hours h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.opening-hours div {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.about {
+    justify-self: center;
+    padding: 15px 40px;
+    display: grid;
+    grid-template-rows: 1fr minmax(150px, 3fr);
+    gap: 15px;
+    justify-items: center;
+    border: 1px solid #e4bc80;
+    border-radius: 15px;
+}
+
+.about h2 {
+    font-size: 2rem;
+    grid-column: 1 / span 3;
+    align-self: start;
+}
+
+footer {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-row: 3;
+    font-size: .9rem;
+    background-color: #361500;
+    color: #CC9544;
+}
