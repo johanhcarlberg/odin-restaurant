@@ -6,7 +6,7 @@ function createMenu() {
     const links = [
         'Home',
         'Menu',
-        'Contacts'
+        'Contact'
     ];
 
     const nav = document.createElement('nav');
