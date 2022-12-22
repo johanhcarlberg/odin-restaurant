@@ -2,12 +2,14 @@ import './style.css';
 import header from './header.js';
 import homeContent from './home.js';
 import menuContent from './menu.js';
+import contactContent from './contact';
 
 console.log('Restaurant app loaded!');
 
 const pages = {
     'Home': homeContent,
     'Menu': menuContent,
+    'Contact': contactContent,
 }
 
 document.querySelector('body').appendChild(header);
