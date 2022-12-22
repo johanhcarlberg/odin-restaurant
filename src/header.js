@@ -1,6 +1,3 @@
-
-
-
 const header = document.createElement('header');
 header.appendChild(createMenu());
 header.appendChild(createHeaderImage());
