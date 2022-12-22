@@ -12,7 +12,7 @@ const pages = {
     'Contact': contactContent,
 }
 
-document.querySelector('body').appendChild(header);
+document.body.appendChild(header);
 const headerLinks = header.querySelectorAll('nav li > a');
 for (const headerLink of headerLinks) {
     headerLink.addEventListener('click', (e) => {
