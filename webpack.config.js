@@ -5,7 +5,7 @@ module.exports = {
         index: './src/index.js',
         header: './src/header.js',
         home: './src/home.js',
-        menu: './src/menu.js',
+        menu: './src/modules/menu/menu.js',
         contact: './src/contact.js',
     },
     devtool: 'inline-source-map',

@@ -1,0 +1,42 @@
+.menu-content {
+    border: 1px solid #e4bc80;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.menu-content h2 {
+    font-size: 2rem;
+    margin: 0 15px 0 15px;
+    border-bottom: 1px solid #e4bc80;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.menu-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px 15px;
+}
+
+.menu-item-name {
+    justify-self: start;
+}
+
+.menu-item-price {
+    justify-self: end;
+}
+
+.menu-item-price:before{
+    content: '$';
+}
+
+.menu {
+    background-color: #ffe4bc;
+    border-radius: 15px;
+    color: #361500;
+    padding: 15px 0px;
+}
+
+.menu-item:nth-child(odd) {
+    background-color: #f6dab0;
+}

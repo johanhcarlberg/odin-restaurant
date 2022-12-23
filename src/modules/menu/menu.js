@@ -1,3 +1,4 @@
+import './style.css';
 const menuItemFactory = (name, price) => {
     return {name, price};
 }
@@ -13,15 +14,19 @@ const menuItemsArr = [
 const menuContent = document.createElement('div');
 menuContent.classList.add('menu-content');
 
-const menuContentHeader = document.createElement('h2');
-menuContentHeader.textContent = 'Menu';
-menuContent.appendChild(menuContentHeader);
+const menuHeader = document.createElement('h2');
+menuHeader.textContent = 'Menu';
+
+const menuDiv = document.createElement('div');
+menuDiv.classList.add('menu');
+menuContent.appendChild(menuDiv);
+menuDiv.appendChild(menuHeader);
 addMenuItems();
 
 function addMenuItems() {
     for (let menuItem in menuItemsArr) {
         const menuItemDiv = createMenuItem(menuItemsArr[menuItem]);
-        menuContent.appendChild(menuItemDiv);
+        menuDiv.appendChild(menuItemDiv);
     }
 }
 

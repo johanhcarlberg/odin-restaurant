@@ -1,7 +1,7 @@
 import './style.css';
 import header from './header.js';
 import homeContent from './home.js';
-import menuContent from './menu.js';
+import menuContent from './modules/menu/menu.js';
 import contactContent from './contact';
 
 console.log('Restaurant app loaded!');
