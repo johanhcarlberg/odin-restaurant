@@ -1,0 +1,28 @@
+.contact-content {
+    padding: 10px 20px 20px 20px;
+    border: 1px solid #e4bc80;
+    border-radius: 15px;
+}
+
+.contact-content h2 {
+    font-size: 2rem;
+}
+
+.contact {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact svg {
+    width: 24px;
+    height: 24px;
+    fill:#e4bc80;
+}
+
+.phoneImg, .emailImg {
+    display: grid;
+    align-items: center;
+}
