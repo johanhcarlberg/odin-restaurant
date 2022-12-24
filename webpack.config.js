@@ -6,7 +6,7 @@ module.exports = {
         header: './src/header.js',
         home: './src/modules/home/home.js',
         menu: './src/modules/menu/menu.js',
-        contact: './src/contact.js',
+        contact: './src/modules/contact/contact.js',
     },
     devtool: 'inline-source-map',
     output: {

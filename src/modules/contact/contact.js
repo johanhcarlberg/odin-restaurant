@@ -1,3 +1,5 @@
+import './style.css';
+
 const contactContent = document.createElement('div');
 contactContent.classList.add('contact-content');
 
