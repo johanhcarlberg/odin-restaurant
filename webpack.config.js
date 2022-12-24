@@ -4,7 +4,7 @@ module.exports = {
     entry: {
         index: './src/index.js',
         header: './src/header.js',
-        home: './src/home.js',
+        home: './src/modules/home/home.js',
         menu: './src/modules/menu/menu.js',
         contact: './src/contact.js',
     },

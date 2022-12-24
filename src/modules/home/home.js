@@ -1,3 +1,5 @@
+import './style.css';
+
 const homeContent = document.createElement('div');
 homeContent.classList.add('home-content');
 
