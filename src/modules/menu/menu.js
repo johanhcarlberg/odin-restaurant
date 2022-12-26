@@ -5,8 +5,8 @@ const menuItemFactory = (name, price, section) => {
 
 const menuSections = [
     'Main Courses',
-    'Sides',
-    'Dessert'
+    'Entries',
+    'Desserts'
 ]
 
 const menuItemsArr = [
@@ -15,6 +15,8 @@ const menuItemsArr = [
     menuItemFactory('Hilariously Humongous Pizza', 15, menuSections[0]),
     menuItemFactory('Caesar Sallad', 8, menuSections[1]),
     menuItemFactory('Tantalizing Tortilla Taco', 10, menuSections[1]),
+    menuItemFactory('Cool Chocolate Cheesecake', 4, menuSections[2]),
+    menuItemFactory('Best Banana Pie', 3, menuSections[2])
 ]
 
 const menuContent = document.createElement('div');
