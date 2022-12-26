@@ -13,7 +13,7 @@ const menuItemsArr = [
     menuItemFactory('Mega Super Hamburger', 12, menuSections[0]),
     menuItemFactory('Incredibly Delicious Pasta', 11, menuSections[0]),
     menuItemFactory('Hilariously Humongous Pizza', 15, menuSections[0]),
-    menuItemFactory('Caesar Sallad', 8, menuSections[1]),
+    menuItemFactory('Conqueror\'s Caesar Sallad', 8, menuSections[1]),
     menuItemFactory('Tantalizing Tortilla Taco', 10, menuSections[1]),
     menuItemFactory('Cool Chocolate Cheesecake', 4, menuSections[2]),
     menuItemFactory('Best Banana Pie', 3, menuSections[2])
@@ -34,9 +34,11 @@ addMenuItems();
 function addMenuItems() {
     for (let menuSection of menuSections) {
         const menuItems = menuItemsArr.filter(item => item.section === menuSection);
+
         if (menuItems.length === 0) {
             continue;
         }
+
         const menuSectionHeader = document.createElement('h3');
         menuSectionHeader.textContent = menuSection;
         menuDiv.appendChild(menuSectionHeader);
@@ -45,10 +47,6 @@ function addMenuItems() {
             menuDiv.appendChild(menuItemDiv);
         }
     }
-/*     for (let menuItem in menuItemsArr) {
-        const menuItemDiv = createMenuItem(menuItemsArr[menuItem]);
-        menuDiv.appendChild(menuItemDiv);
-    } */
 }
 
 function createMenuItem(menuItem) {
