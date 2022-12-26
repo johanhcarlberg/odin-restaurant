@@ -1,14 +1,20 @@
 import './style.css';
-const menuItemFactory = (name, price) => {
-    return {name, price};
+const menuItemFactory = (name, price, section) => {
+    return {name, price, section};
 }
 
+const menuSections = [
+    'Main Courses',
+    'Sides',
+    'Dessert'
+]
+
 const menuItemsArr = [
-    menuItemFactory('Mega Super Hamburger', 12),
-    menuItemFactory('Incredibly Delicious Pasta', 11),
-    menuItemFactory('Hilariously Humongous Pizza', 15),
-    menuItemFactory('Caesar Sallad', 8),
-    menuItemFactory('Tantalizing Tortilla Taco', 10),
+    menuItemFactory('Mega Super Hamburger', 12, menuSections[0]),
+    menuItemFactory('Incredibly Delicious Pasta', 11, menuSections[0]),
+    menuItemFactory('Hilariously Humongous Pizza', 15, menuSections[0]),
+    menuItemFactory('Caesar Sallad', 8, menuSections[1]),
+    menuItemFactory('Tantalizing Tortilla Taco', 10, menuSections[1]),
 ]
 
 const menuContent = document.createElement('div');
@@ -24,10 +30,22 @@ menuDiv.appendChild(menuHeader);
 addMenuItems();
 
 function addMenuItems() {
-    for (let menuItem in menuItemsArr) {
+    for (let menuSection of menuSections) {
+        console.log(menuSection);
+        const menuItems = menuItemsArr.filter(item => item.section === menuSection);
+        console.log(menuItems);
+        const menuSectionHeader = document.createElement('h3');
+        menuSectionHeader.textContent = menuSection;
+        menuDiv.appendChild(menuSectionHeader);
+        for (let menuItem of menuItems) {
+            const menuItemDiv = createMenuItem(menuItem);
+            menuDiv.appendChild(menuItemDiv);
+        }
+    }
+/*     for (let menuItem in menuItemsArr) {
         const menuItemDiv = createMenuItem(menuItemsArr[menuItem]);
         menuDiv.appendChild(menuItemDiv);
-    }
+    } */
 }
 
 function createMenuItem(menuItem) {
