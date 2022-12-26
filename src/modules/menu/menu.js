@@ -31,9 +31,10 @@ addMenuItems();
 
 function addMenuItems() {
     for (let menuSection of menuSections) {
-        console.log(menuSection);
         const menuItems = menuItemsArr.filter(item => item.section === menuSection);
-        console.log(menuItems);
+        if (menuItems.length === 0) {
+            continue;
+        }
         const menuSectionHeader = document.createElement('h3');
         menuSectionHeader.textContent = menuSection;
         menuDiv.appendChild(menuSectionHeader);
